@@ -1,0 +1,46 @@
+:root {
+    --neon-green: #39FF14;
+    --hot-pink: #FF69B4;
+    --deep-purple: #4B0082;
+    --glass-white: rgba(255, 255, 255, 0.95);
+}
+
+body {
+    background-color: #2d001a;
+    background-image: radial-gradient(var(--hot-pink) 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    margin: 0; display: flex; justify-content: center;
+    font-family: 'Tahoma', sans-serif; min-height: 100vh;
+}
+
+.main-wrapper {
+    max-width: 1000px; width: 95%; background: var(--glass-white);
+    margin: 20px 0; border: 4px double var(--neon-green);
+    box-shadow: 0 0 20px var(--hot-pink); display: flex; flex-direction: column;
+}
+
+header { background: var(--neon-green); padding: 10px; border-bottom: 3px solid var(--deep-purple); display: flex; align-items: center; }
+.y2k-marquee { font-weight: bold; color: var(--deep-purple); flex-grow: 1; }
+.mini-avatar { width: 35px; height: 35px; border-radius: 50%; border: 2px solid var(--deep-purple); margin-right: 10px; background: white; }
+
+main { display: grid; grid-template-columns: 1fr 300px; gap: 20px; padding: 20px; }
+
+.window { background: white; border: 3px solid var(--deep-purple); margin-bottom: 20px; box-shadow: 5px 5px 0px var(--neon-green); }
+.window-header { background: linear-gradient(90deg, var(--hot-pink), var(--deep-purple)); padding: 8px; color: white; font-weight: bold; }
+.window-body { padding: 10px; }
+
+.btn-neon { background: var(--neon-green); border: 2px solid #000; padding: 10px; width: 100%; cursor: pointer; font-weight: bold; margin-top: 5px; }
+
+.dynamic-feed { display: flex; flex-direction: column; gap: 15px; }
+.chat-bubble {
+    background: #ffffcc; padding: 15px; border: 2px solid var(--deep-purple);
+    box-shadow: 4px 4px 0px var(--neon-green); height: auto; word-wrap: break-word; margin-bottom: 10px;
+}
+
+.avatar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.avatar-option { cursor: pointer; border: 2px solid transparent; width: 100%; border-radius: 4px; }
+.avatar-option.selected { border: 2px solid var(--hot-pink); box-shadow: 0 0 5px var(--hot-pink); }
+
+input, textarea { width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+
+.scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%); background-size: 100% 4px; z-index: 9999; pointer-events: none; }
