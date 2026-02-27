@@ -1,5 +1,5 @@
 // Exemplo: se seu IP for 192.168.1.10
-const SERVER_URL = 'http://192.168.30.15:3000'; 
+const SERVER_URL = 'https://os-menos-menos-chat.onrender.com'; 
 const socket = io(SERVER_URL);
 
 export const ChatManager = {
@@ -18,4 +18,5 @@ export const ChatManager = {
         });
     },
     get() { return this.mensagens; }
+
 };
