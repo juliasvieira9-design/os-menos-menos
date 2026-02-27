@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>os-menos-menos | Cyber-Eden</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="main-wrapper">
+        <header>
+            <div class="user-identity">
+                <img src="" id="user-display-avatar" class="mini-avatar">
+                <span id="user-display-name">Carregando...</span>
+            </div>
+            <marquee class="y2k-marquee">📉 OS MENOS MENOS — NODE.JS REAL-TIME — 💾</marquee>
+        </header>
+
+        <main>
+            <section class="content">
+                <div class="window">
+                    <div class="window-header"><span>Mural dos Miguxos</span></div>
+                    <div class="window-body">
+                        <form id="social-form">
+                            <input type="text" id="user-name-input" placeholder="teu nick..." required>
+                            <textarea id="msg-input" placeholder="Diz algo aqui..." required></textarea>
+                            <button type="submit" class="btn-neon">ENVIAR AGORA ✨</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="social-feed" class="dynamic-feed"></div>
+            </section>
+
+            <aside class="sidebar">
+    <div class="window">
+        <div class="window-header"><span>Teu Perfil</span></div>
+        <div class="window-body">
+            <div id="avatar-selector" class="avatar-grid"></div>
+        </div>
+    </div>
+    
+    <div class="window" id="pip-tv" style="display: block; min-height: 150px;">
+        <div class="window-header"><span>Cyber-TV</span></div>
+        <div class="window-body">
+            <div id="tv-screen">
+                <p style="text-align:center; font-size:12px; color:#666; padding:20px;">
+                    Aguardando link do YouTube...
+                </p>
+            </div>
+        </div>
+    </div>
+</aside>
+        </main>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
