@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>os menos menos | Social Cyber-Eden</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="y2k-bg">
+    <div class="scanlines"></div>
+    
+    <div class="main-wrapper">
+        <header class="neon-header">
+            <div class="user-identity" id="header-profile">
+                <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Felix" id="user-display-avatar" class="mini-avatar">
+                <span id="user-display-name">Visitante</span>
+            </div>
+            <marquee class="y2k-marquee">🎀 BEM-VINDO AO OS MENOS MENOS — ONDE O PINK ENCONTRA O PIXEL 🎀 [STATUS: ONLINE]</marquee>
+        </header>
+
+        <main class="portal-grid">
+            <section class="content-area">
+                <div class="window">
+                    <div class="window-header"><span>Postar no Mural</span></div>
+                    <div class="window-body">
+                        <form id="social-form">
+                            <input type="text" id="user-name-input" placeholder="Seu apelido..." required>
+                            <textarea id="msg-input" placeholder="Escreva algo... (Links do YouTube ligam a TV!)" required></textarea>
+                            <button type="submit" class="btn-neon">ENVIAR AGORA ✨</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="social-feed" class="dynamic-feed">
+                    </div>
+            </section>
+
+            <aside class="sidebar-area">
+                <div class="window">
+                    <div class="window-header"><span>Escolher Bonequinho</span></div>
+                    <div class="window-body">
+                        <div id="avatar-selector" class="avatar-grid">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="window">
+                    <div class="window-header"><span>No Chat Agora</span></div>
+                    <div class="window-body" id="online-friends">
+                        </div>
+                </div>
+
+                <div class="window draggable" id="pip-tv" style="display:none;">
+                    <div class="window-header">
+                        <span>Cyber-TV PiP</span>
+                        <button onclick="document.getElementById('pip-tv').style.display='none'" style="cursor:pointer;">X</button>
+                    </div>
+                    <div class="window-body video-wrapper">
+                        <div id="tv-screen"></div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
