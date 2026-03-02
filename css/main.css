@@ -76,3 +76,42 @@ input, textarea {
 .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%); background-size: 100% 4px; z-index: 9999; pointer-events: none; opacity: 0.3; }
+/* Janela da TV Flutuante */
+.tv-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px var(--hot-pink);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito para quando quiser esconder um pouco a TV */
+.tv-floating.minimized {
+    transform: translateY(140px);
+}
+
+.tv-floating .window-body {
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Responsividade: No celular ela fica menor para não tapar tudo */
+@media (max-width: 600px) {
+    .tv-floating {
+        width: 180px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+.tv-floating {
+    position: fixed;
+    bottom: 20px; /* Posição inicial */
+    right: 20px;  /* Posição inicial */
+    width: 280px;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8), 0 0 5px var(--hot-pink);
+    touch-action: none; /* Previne scroll da página ao arrastar no celular */
+}
